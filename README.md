@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# TrainUp User Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Кваліфікаційна (бакалаврська) робота
 
-## Available Scripts
+### Проектування та розробка системи планування тренувань
 
-In the project directory, you can run:
+**Виконав:**     студент групи ПМІ-46  
+                спеціальності 122 – комп’ютерні науки  
+                Карпа Ю. В.
+                
+**Керівник:**    ст. викл. Костів В. Я.
 
-### `npm start`
+**Установа:**    Львівський національний університет імені Івана Франка  
+**Факультет:**   Прикладної математики та інформатики  
+**Кафедра:**     Програмування  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+**TrainUp** — це користувацька частина веб-застосунку для взаємодії тренерів та клієнтів у фітнес-сфері. Система забезпечує зручне керування тренуваннями, комунікацію, відстеження прогресу та планування за допомогою календаря.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Технології
 
-### `npm test`
+- **React 18**
+- **React Router DOM**
+- **Axios**
+- **Tailwind CSS**
+- **Context API**
+- **JWT авторизація**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Функціонал
 
-### `npm run build`
+- Авторизація за допомогою JWT (логін, реєстрація)
+- Роздільна рольова система (тренер / клієнт)
+- Перегляд, планування та CRUD-керування тренуваннями
+- Чат між тренером та клієнтом
+- Календар з тренуваннями
+- Відстеження прогресу
+- Панель тренера з управлінням клієнтами
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Запуск
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Клонуйте репозиторій:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/ykarpa/TrainUpUI.git
+cd TrainUpUI
+```
 
-### `npm run eject`
+### 2. Встановіть залежності:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Налаштуйте `API`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Файл `src/config.js`:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```js
+export const API_URL = "http://localhost:8080/api"; // або адреса вашого сервера
+```
+Переконайтесь, що бекенд TrainUpServer запущений.
 
-## Learn More
+### 4. Запустіть:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Після запуску застосунок буде доступний за адресою:
+`http://localhost:3000/`
 
-### Code Splitting
+## Збірка
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run build
+```
 
-### Analyzing the Bundle Size
+Готовий додаток буде у папці `dist/`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Деплой
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Додатково
+Серверна частина: [TrainUp](https://github.com/ykarpa/TrainUpServer)  
